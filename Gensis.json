@@ -1,0 +1,50 @@
+//genesis block 
+// is the frist block in the chain and it is the only block without a predacessor 
+// sets the main settings for your block chain
+// main parameters are 
+// coinfig difficulty ; gas limint ; eiplock
+{
+    "config": {
+        //main block chain configeration
+
+      "chainId": 33,
+//is the chain identifier
+      //it is an integer used to protect against replay attack
+      // a replay attack is accessing the network with out a authentication  or network tapping to get info and providing malware as the victim to the computer
+      "homesteadBlock": 0,
+ //provides connection to main network
+      //is sencond major release of etherum 
+      // 0 states your using homestead release
+      "eip155Block": 0,
+  //eip = etherum improvement proposal
+      //provides connection to main network
+      "eip158Block": 0
+
+    },
+    "nonce": "0x0000000000000033",
+
+    "timestamp": "0x0",
+
+    "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        // set to zero it is not needed for a new private network
+
+    "extraData": "0x0",
+    //set to default as per client version it not provided explicity
+
+    "gasLimit": "0x8000000",
+//maxium amount of gas used in each block
+    //the higher the value the higher amount of transactions that be used in a block
+    "difficulty": "0x100",
+    //shows how difficult it is to mine a block
+
+    
+    "mixhash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        //set to 0 if it a new private network
+
+    "coinbase": "0x3333333333333333333333333333333333333333",
+        //coinbase which is also known as etherbase which the default primary account
+
+    "alloc": {}
+        //used to allocate eth to to an address which served as prefunded accounts
+
+  }

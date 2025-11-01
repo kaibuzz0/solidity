@@ -1,0 +1,36 @@
+{
+  "config": {
+    "chainId": 15,
+    "homesteadBlock": 0
+  },
+  "difficulty": "1",
+  "gasLimit": "9999999",
+  "nonce": "0xdeadbeefdeadbeef",
+  "mixhash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "alloc": {
+    "0xfE845b886BbF5af6652b71C5a9d90c4BDE238979": {
+      "balance": "30000"
+    },
+    "0x0014Cc31af124cc47514A6e7b514a3706125121c": {
+      "balance": "40000"
+    }
+  }
+}
+
+
+
+
+0xfE845b886BbF5af6652b71C5a9d90c4BDE238979
+0x0014Cc31af124cc47514A6e7b514a3706125121c
+
+sudo apt-get install software-common
+sudo add-apt-repository -y ppa:ethereum/ethereum
+sudo apt-get update
+sudo apt-get install ethereum
+mkdir privatechain
+ls
+chmod 777 privatechain
+geth -datadir "privatechain" -dev account new
+cd privatechain
+emacs genesisblock.json
+geth -datadir="home/kaikai/privatechain" init "/home/kaikai/privatechain/genesisblock.json"
